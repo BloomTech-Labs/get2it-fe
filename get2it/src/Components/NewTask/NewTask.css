@@ -46,10 +46,6 @@
       /* border-radius: 3px 3px 0 0 ; */
 
     }
-    h1 {
-      
-
-    }
     .create-new {
       /* border-top: 1px solid rgb(255, 255, 255); */
       width: 100%;
@@ -167,12 +163,18 @@
     display: flex;
     flex-flow: column;
     overflow: auto !important;
-    width: 75%;
-    height: 75vh;
+    width: 74.5%;
+    height: 72.2vh;
     padding: 0 10px;
     background-color: #212936;
-    border: 2px solid #303b4d;
-    border-radius: 5px;
+    border: 1px solid #303b4d;
+  }
+
+  .dashboard .appRoutes .newTaskContainer .newTaskHeader {
+    font-size: 1.7rem;
+    letter-spacing: -0.03rem;
+    margin-left: -20.2rem;
+    margin-top: -0.4rem;
   }
   .date-picker-container {
     width: 100%;
@@ -369,11 +371,6 @@
   .color-indicator:hover {
     transform: scale(1.1);
   }
-  .lable{
-
-
-
-  }
   .calender-date{
     display: flex;
     align-content: space-around;
@@ -425,13 +422,7 @@
     margin-left: 350px;
   }
 
-  .NewTask-Tittle2{
-    font-size: 1.4em;
-    font-weight: bold;
-    margin-left: -130px;
-    margin-top: -50px;
-    text-transform: uppercase;
-  }
+
   .lableIcon{
    background-color: #fff;
   }

@@ -220,7 +220,7 @@ class NewTask extends React.Component {
       <div className="newTaskContainer">
         <br />
 
-        <h1 className="NewTask-Title"> Add New Task</h1>
+        <h1 className="newTaskHeader"> Add New Task</h1>
         {/* <hr className="line" /> */}
         <br />
         {/* <Category/> */}
