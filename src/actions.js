@@ -57,7 +57,7 @@ export function login(email, password) {
   return (dispatch) => {
     dispatch({ type: LOGIN_START })
 
-    return axios.post(' https://get2itpt9.herokuapp.com/api/auth/login', { email, password })
+    return axios.post('https://get2itpt9.herokuapp.com/api/auth/login', { email, password })
       .then((res) => {
         localStorage.setItem('token', res.data.token)
         dispatch({ type: LOGIN_SUCCESS, payload: res.data.user });
