@@ -106,12 +106,12 @@ The is no API for payment at this time.
 
 In future release canvases we are planning on using calendars from google and other sites.
 
-# 3️⃣ Environment Variables
+Environment Variables
 
 There are no environment variables at this time.
 
 
-# 5️⃣ Content Licenses
+Content Licenses
 
 | Image Filename | Source / Creator | License                                                                      |
 | -------------- | ---------------- | ---------------------------------------------------------------------------- |
