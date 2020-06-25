@@ -37,7 +37,8 @@ class editTaskList extends React.Component {
       taskList: list
     })
   }
-  itemArr = []
+
+  itemArr = [];
   check = item => {
     var task = item.id
     console.log(task)
@@ -58,6 +59,7 @@ class editTaskList extends React.Component {
     this.classBTN(item)
     console.log(this.itemArr)
   }
+
   classBTN = item => {
     console.log("hitting check")
     $("#containter")
@@ -66,7 +68,7 @@ class editTaskList extends React.Component {
   }
 
   arrar = []
-  complete = () => {
+  complete = async () => {
     for (var i = 0; i < this.itemArr.length; i++) {
       this.arrar.push(this.itemArr[i])
     }
@@ -75,7 +77,7 @@ class editTaskList extends React.Component {
       this.getTaskById(id)
     })
 
-    setTimeout(() => {
+    await setTimeout(() => {
       window.location.reload(true)
     }, 500)
   }
@@ -87,14 +89,11 @@ class editTaskList extends React.Component {
         this.tasksById.push(task)
       }
     })
-    // console.log(this.tasksById)
     this.setState(
       {
         retrievedTasks: this.tasksById
       },
       () => {
-        // console.log(this.state.retrievedTasks);
-
         this.state.retrievedTasks.map(task => {
           const id = task.id
           const payload = {
@@ -109,18 +108,18 @@ class editTaskList extends React.Component {
     )
   }
 
-  deleted = id => {
+  deleted = async (id) => {
     this.props.deleteTask(id)
-    this.setState(
-      {
-        taskList: this.props.userTasks.filter(task => {
-          return task.status === false
-        })
-      },
-      setTimeout(() => {
-        window.location.reload(true)
-      }, 100)
-    )
+    // await this.setState(
+    //   {
+    //     taskList: this.props.userTasks.filter(task => {
+    //       return task.status === false
+    //     })
+    //   },
+      // await setTimeout(() => {
+      //   window.location.reload(true)
+      // }, 500)
+    // )
   }
 
   componentDidMount() {
@@ -133,7 +132,6 @@ class editTaskList extends React.Component {
     return task.status === true
   })
 
-  // render content to page
   render() {
     return (
       <div className="taskCont">
