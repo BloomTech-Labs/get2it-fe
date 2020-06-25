@@ -108,18 +108,18 @@ class editTaskList extends React.Component {
     )
   }
 
-  deleted = async (id) => {
+  deleted = id => {
     this.props.deleteTask(id)
-    // await this.setState(
-    //   {
-    //     taskList: this.props.userTasks.filter(task => {
-    //       return task.status === false
-    //     })
-    //   },
-      // await setTimeout(() => {
-      //   window.location.reload(true)
-      // }, 500)
-    // )
+    this.setState(
+      {
+        taskList: this.props.userTasks.filter(task => {
+          return task.status === false
+        })
+      },
+      setTimeout(() => {
+        window.location.reload(true)
+      }, 500)
+    )
   }
 
   componentDidMount() {
