@@ -145,7 +145,7 @@ export function updateUser(payload, id) {
     }
 
     axios
-      .put(` https://get2itpt9.herokuapp.com/api/auth/edit-profile/${id}`, payload, { headers })
+      .put(` https://get2itpt9.herokuapp.com/api/auth/users/${id}`, payload, { headers })
       .then(res => {
           dispatch({ type: UPDATE_USER_SUCCESS, payload: payload, id: id });
       })
@@ -170,7 +170,10 @@ export function createTask(payload, user_id, category_id) {
           dispatch({ type: CREATE_TASK_SUCCESS, payload: payload});
           let task_id = res.data.id;
           console.log(task_id, user_id, category_id);
-          return axios.post(`https://get2itpt9.herokuapp.com/api/categories/${category_id}/tasks`, {task_id: task_id}, {headers})
+          return axios.post(`https://get2itpt9.herokuapp.com/api/categories/${category_id}/tasks`, 
+            {task_id: task_id}, 
+            {headers}
+          )
       })
       .then(res => console.log(res))
       .catch(err => {
