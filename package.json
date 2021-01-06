@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "autoprefixer": "^9.7.6",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "bootstrap-datetimerangepicker": "^2.1.17",
     "css-loader": "^3.5.2",
